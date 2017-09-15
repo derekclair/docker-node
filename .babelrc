@@ -1,0 +1,24 @@
+{
+  "presets": [
+    "env"
+  ],
+  "plugins": [
+    [
+      "inline-import",
+      {
+        "extensions": [
+          ".json",
+          ".sql"
+        ]
+      }
+    ]
+  ],
+  "env": {
+    "targets": {
+      "node": "current"
+    },
+    "local": {
+      "sourceMaps": "inline"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  node:
+    container_name: scratchpad-node
+    environment:
+      - NODE_ENV=development
+    image: derekclair/scratchpad-node:latest
+    ports:
+      - "3010:3000"
