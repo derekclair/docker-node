@@ -2,7 +2,15 @@
 	"name": "docker-node",
 	"version": "1.0.0",
 	"description": "Experiments with Docker & Node",
-	"author": "Derek Clair <derek@derekclair.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com:derekclair/docker-node.git"
+	},
+	"author": {
+		"name": "Derek Clair",
+		"email": "derek@derekclair.com",
+		"url": "https://github.com/derekclair"
+	},
 	"license": "ISC",
 	"engines": {
 		"node": "8.5.0",
@@ -11,10 +19,11 @@
 	},
 	"main": "index.js",
 	"scripts": {
-		"build": "docker build -t derekclair/scratchpad-node:latest .",
-		"start": "node index.js",
+		"start": "babel-node src",
+		"start:production": "node build",
 		"start:docker": "docker-compose up",
-		"start:babel": "babel-node index.js",
+		"build:docker": "npm build && docker build -t derekclair/scratchpad-node:latest .",
+		"build": "babel index.js -d build",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {

@@ -1,7 +1,7 @@
 FROM node:8.5
 
 LABEL version="1.0"
-# LABEL github.basement-labs="docker-node"
+LABEL name="local-node-scratchpad"
 LABEL maintainer="Derek Clair <derek@derekclair.com>"
 
 ENV NPM_CONFIG_LOGLEVEL warn
@@ -16,5 +16,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["node", "index.js"]
-# CMD ["babel-node", "index.js"]
+CMD ["node", "build/index.js"]

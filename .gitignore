@@ -29,6 +29,9 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
+# production
+build/
+
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
@@ -57,3 +60,6 @@ typings/
 # dotenv environment variables file
 .env
 
+# IDE settings
+.vscode
+!.vscode/settings.json
